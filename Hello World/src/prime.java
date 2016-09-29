@@ -5,7 +5,15 @@ public class prime {
 	static int eintraegeProZeile = 0;
 
 	public static void main(String[] args) {
-		Primezahlen(100,1000);
+		/*Primezahlen(100,1000);*/
+		addition ( 10,5);
+	
+	}
+
+	
+	public static void addition(int x, int y){
+	
+		System.out.println( "x+y="+ x+y);
 	}
 		
 		public static void Primezahlen(int Start, int Stop){
