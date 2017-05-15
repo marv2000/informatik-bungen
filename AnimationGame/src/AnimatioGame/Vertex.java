@@ -4,6 +4,10 @@ public class Vertex {
 //	Attribute
 	public double x;
 	public double y;
+	
+	
+	
+	
 	public Vertex(double x,double y){
 // Konstrktor		
 		this.x=x;

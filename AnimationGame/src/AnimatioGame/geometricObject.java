@@ -28,7 +28,20 @@ public class geometricObject {
 	
 	
 	public geometricObject(double height, double width){this(height, width, new Vertex(0,0));}
-
+	
+	public geometricObject(double s){this(s,s);}
+	
+	public geometricObject(){this(10);}
+	
+	public geometricObject(Vertex pos){this(10,10,pos);}
+	
+	public String toString(){
+		return "width= " + width + "; height= "+ height + "; pos= " + pos;
+	}
+	public double circumference(){
+		return 2*(height+width);
+	}
+	
 	public Vertex getPos(){return pos;}
 	public double getWidth(){ return width;}
 	public double getHeight(){return height;}
