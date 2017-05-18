@@ -41,9 +41,44 @@ public class geometricObject {
 	public double circumference(){
 		return 2*(height+width);
 	}
+	public double area(){
+		return height*width;
+	}
 	
 	public Vertex getPos(){return pos;}
 	public double getWidth(){ return width;}
 	public double getHeight(){return height;}
+	
+	public boolean contains(Vertex v){
+		return v.x>=pos.x && v.x<=pos.x+width && v.y >=pos.y && v.y<=pos.y+ height;
+	}
+	public boolean isLarger(geometricObject that){
+		return this.area() > that.area();
+	}	
+	
+	public void moveTo(double x, double y){
+		moveTo(new Vertex(x,y));
+	}
+	
+	public void moveTo(Vertex v){
+		this.pos=v;
+	}
+	
+	public void moveTo(){
+		pos=new Vertex(0,0);
+	}
+	
+	public boolean equals(Object thatObject) {
+		 if (thatObject instanceof geometricObject) {
+		 geometricObject that = (geometricObject)thatObject;
+		 return that.width==this.width
+		 && this.height==that.height
+		 && this.pos.equals(that.pos);
+		 }
+		 return false;
+	 }
+	
+
+	
 	
 }
